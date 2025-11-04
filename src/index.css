@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -66,3 +66,44 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+ */
+
+/*  */
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.navbar{
+  background-color: #66f253;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+}
+
+nav ul li{
+    align-self: center;
+}
+
+.blog-logo{
+  align-self: flex-start;
+}
+
+.article-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2em;
+
+}
+
+.article{
+  display:flex;
+  flex-direction: column;
+  width: 20vw;
+}
+
