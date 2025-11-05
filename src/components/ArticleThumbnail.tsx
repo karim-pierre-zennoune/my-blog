@@ -1,22 +1,24 @@
-import stonksImage from '../assets/stonks.png'
+// import stonksImage from '../assets/stonks.png'
 
-function ArticleThumbnail(){
-let article = {
-   title: 'Titre de l\'article',
-   content: 'Voici le contenu de l\'article.',
-   image: {stonksImage},
-   createdAt: new Date(),
-   isPublished: false,
-   likeCount: 0,
-   categoryName: 'React',
- };
+// interface ArticleThumbnailProp{
+//     id: number;
+//     title: string;
+//     author: string;
+//     content: string;
+//     image: string;
+//     createdAt: Date;
+// }
+
+
+// function ArticleThumbnail(props: any){
+function ArticleThumbnail({ props }){
 
     return(
         <article className="article">
-            <img src={stonksImage} alt="" />
-            <p>{article.createdAt.toISOString()}</p>
-            <h4>{article.title}</h4>
-            <p>{article.content}</p>
+            <img src={props.image} alt="" />
+            <p>{props.createdAt.toISOString()}</p>
+            <h4>{props.title}</h4>
+            <p>{props.content}</p>
         </article>
     );
 }
