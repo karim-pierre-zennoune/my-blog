@@ -1,24 +1,40 @@
 // import stonksImage from '../assets/stonks.png'
 
-// interface ArticleThumbnailProp{
-//     id: number;
-//     title: string;
-//     author: string;
-//     content: string;
-//     image: string;
-//     createdAt: Date;
-// }
+import { useState } from "react";
+
+export interface ArticleThumbnailProp{
+    id: number;
+    title: string;
+    author: string;
+    content: string;
+    image: any;
+    createdAt: Date;
+}
+
+// ❤️
+// 🤍
+
 
 
 // function ArticleThumbnail(props: any){
-function ArticleThumbnail({ props }){
+function ArticleThumbnail( {article }: any  ){
+
+    // like btn  ❤️  🤍
+    const [isLiked, setIsLiked] = useState(false);
+    let likeIcon = isLiked ? "❤️" : "🤍";
+    function handleLikeClic(){
+        // setIsLiked(isLiked ? false : true);
+        setIsLiked(!isLiked);
+    }
 
     return(
         <article className="article">
-            <img src={props.image} alt="" />
-            <p>{props.createdAt.toISOString()}</p>
-            <h4>{props.title}</h4>
-            <p>{props.content}</p>
+            <img src={article.image} alt="" />
+            <p>{article.createdAt}</p>
+            <h4>{article.title}</h4>
+            <p>{article.content}</p>
+            <p onClick={handleLikeClic}>{likeIcon}</p>
+
         </article>
     );
 }
