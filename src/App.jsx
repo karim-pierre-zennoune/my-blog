@@ -8,6 +8,7 @@ import { Route, Router, Routes } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import ArticlePage from './pages/ArticlePage'
 import NotFoundPage from './pages/NotFoundPage'
+import NewArticlePage from './pages/NewArticlePage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,10 +17,9 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<HomePage />} />
+        <Route path="/articles/new" element={<NewArticlePage />} />
         <Route path="/articles/:id" element={<ArticlePage />} />
         <Route path="*" element={<NotFoundPage />} />
-
-
       </Routes>
 
     </>

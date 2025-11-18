@@ -9,6 +9,7 @@ function Header() {
         <ul className="navbar">
           <li><img className="blog-logo" src={blogLogo} alt="" /></li>
           <li><NavLink to="/">HomePage</NavLink></li>
+          <li><NavLink to="/articles/new">Add Article</NavLink></li>
           <li>Login</li>
           <li>Register</li>
           <li>Logout</li>
